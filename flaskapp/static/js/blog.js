@@ -13,7 +13,7 @@ $(function() {
   firebase.initializeApp(firebaseConfig);  
   
   var ref = new Firebase("https://commenting-app.firebaseio.com/"),
-   
+    
     postRef = ref.child(slugify(window.location.pathname));
     var i = 0;
     postRef.on("child_added", function(snapshot) {
