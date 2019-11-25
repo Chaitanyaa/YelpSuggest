@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.VectorAssembler","timestamp":1572569000758,"sparkVersion":"2.4.4","uid":"VectorAssembler_11abdb4ac228","paramMap":{"outputCol":"comb_vec","inputCols":["idf_vec","word_vec"]},"defaultParamMap":{"outputCol":"VectorAssembler_11abdb4ac228__output","handleInvalid":"error"}}
