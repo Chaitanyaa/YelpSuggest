@@ -17,12 +17,12 @@ import numpy as np
 
 from contentrecommendations import getKeyWordsRecoms
 
-s3 = s3fs.S3FileSystem(anon=False, key='AKIAIM3OKQXLAZEGPXIQ', secret='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')
-s3 = s3fs.S3FileSystem(anon=False, key='AKIAIM3OKQXLAZEGPXIQ', secret='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')
+s3 = s3fs.S3FileSystem(anon=False, key='*******', secret='********')
+s3 = s3fs.S3FileSystem(anon=False, key='*******', secret='********')
 s3client = boto3.client(
     's3',
-    aws_access_key_id='AKIAIM3OKQXLAZEGPXIQ',
-    aws_secret_access_key='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'
+    aws_access_key_id='********',
+    aws_secret_access_key='*********'
 )
 
 # Define a flask app
@@ -90,8 +90,8 @@ def suggest():
 def getCardsValue(u_id):
     s3client = boto3.client(
         's3',
-        aws_access_key_id='AKIAIM3OKQXLAZEGPXIQ',
-        aws_secret_access_key='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'
+        aws_access_key_id='*******',
+        aws_secret_access_key='*******'
     )
 
     obj = s3client.get_object(Bucket='yelpsuggest', Key='Data/Final_Result/content1.csv')
