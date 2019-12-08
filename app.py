@@ -15,7 +15,7 @@ import pyarrow.parquet as pq
 import s3fs
 import numpy as np
 
-from contentrecommendations import getKeyWordsRecoms
+from content import getKeyWordsRecoms
 
 s3 = s3fs.S3FileSystem(anon=False, key='*******', secret='********')
 s3 = s3fs.S3FileSystem(anon=False, key='*******', secret='********')
@@ -29,8 +29,8 @@ s3client = boto3.client(
 app = Flask(__name__)
 app.secret_key='yelpsuggest'
 
-from collabrativerecommendations import getCollabRecom
-from contentrecommendations import contentRecommed
+from collabrative import getCollabRecom
+from content import contentRecommed
 
 def avg_topic_rating (ratings_df , counts_df):
     """
